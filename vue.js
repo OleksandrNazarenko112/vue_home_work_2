@@ -9,7 +9,7 @@ var app = new Vue({
   el: '#app',
   data:{
     text: "test",
-    sourceURL:"test.json"
+    sourceURL:"https://garevna.github.io/vue.github.io/data/posts.json"
   },
     components: {
     'the-content': Content
