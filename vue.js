@@ -1,6 +1,6 @@
 const Content = ( 'the-content', {
   props:["info"],
-    template:`<div><h1 v-for="item in info">{{ item }}</h1></div>`
+    template: `<ul><li v-for="item in info">{{item.first}}</li></ul>`
 })
 
 
