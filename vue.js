@@ -1,6 +1,26 @@
 const Content = ( 'the-content', {
   props:["info"],
-    template: `<ul><li v-for="item in info">{{item.first}}</li></ul>`
+    methods: {
+    changeMenuVisibility: function ( event ) {
+      this.visibleStatus = !this.visibleStatus
+    },
+    selectOptionHandler: function ( event ) {
+      this.visibleStatus = false
+      this.$parent.$emit ( 'menuSelect', event.target.innerHTML.trim() )
+    }
+  },
+        data: function () {
+    return {
+      visibleStatus: false
+    }
+  },
+
+
+    template: `
+
+    <div><h1 v-for="item in info"  @click="changeMenuVisibility">{{item.number}}</h1>
+    <p v-for="item in info"   v-if = "visibleStatus" >{{item.six}}</p>
+    </div>`
 })
 
 
@@ -9,7 +29,14 @@ var app = new Vue({
   el: '#app',
   data:{
     text: {},
-    sourceURL:"https://oleksandrnazarenko112.github.io/vue_home_work_2/test.json"
+    sourceURL:"https://oleksandrnazarenko112.github.io/vue_home_work_2/test.json",
+    mainMenuOptions: [
+      "Осень",
+      "Зима",
+      "Весна",
+      "Лето"
+
+    ],
   },
     components: {
     'the-content': Content
@@ -17,7 +44,7 @@ var app = new Vue({
     computed: {
     titles: function () {
 
-      return Object.keys ( this.text )
+      return Object.keys( this.text )
 
     },
   },
@@ -35,5 +62,7 @@ var app = new Vue({
   }
 
 })
+
+
 
 

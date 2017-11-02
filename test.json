@@ -1,18 +1,35 @@
 {
-  "info": [
+
+  "winter": [
   {
-    "number":"1",
-    "second":"2",
-    "third":"3"
+    "head":"Зима",
+    "src":"https://vi.ill.in.ua/m/625x469/914099.jpg",
+    "description":"Держпром. Харьков"
   }
 
   ],
-    "info2": [
+
+   "spring": [
   {
-    "number":"4",
-    "fives":"5",
-    "six":"6"
+    "head":"Весна",
+    "src":"https://www.mandria.ua/oldimg/image/74/2c/1140.jpg",
+    "description":"Зеркальная струя. Харьков"
+  }
+  ],
+     "summer": [
+  {
+    "head":"Лето",
+    "src":"http://dozor.kharkov.ua/content/documents/11414/1141364/Attaches/DSC_0514.jpg",
+    "description":"Парк Горького. Харьков"
+  }
+  ],
+    "autumn": [
+  {
+    "head":"Осень",
+    "src":"https://static.detivgorode.ua/files/events/17448/17448_photo_59e5dc33cdc98.jpg",
+    "description":"Холодная гора. Харьков"
   }
   ]
+
 
 }

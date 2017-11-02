@@ -11,9 +11,10 @@
 
   <body>
     <div id="app">
-       <button v-on:click="loadJSON">Заметки о Vue.js</button>
-       
-        <the-content :info='text' ></the-content>
+       <button v-on:click="loadJSON">Push Me</button>
+
+        <the-content v-for="item in titles" :info="text[item]"></the-content>
+
     </div>
     
    <script src="vue.js"></script>
