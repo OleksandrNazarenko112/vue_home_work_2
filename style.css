@@ -1,3 +1,6 @@
+body{
+	overflow-y: scroll;
+}
 .menu{
 	font-size: 40px;
 	background-color: #FFF;
@@ -45,6 +48,6 @@ h3{
 	display: inline-block;
 	text-align: center;
 	float: right;
-	
+
 
 }
