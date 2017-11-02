@@ -1,13 +1,11 @@
+
 const Content = ( 'the-content', {
   props:["info"],
     methods: {
     changeMenuVisibility: function ( event ) {
       this.visibleStatus = !this.visibleStatus
     },
-    selectOptionHandler: function ( event ) {
-      this.visibleStatus = false
-      this.$parent.$emit ( 'menuSelect', event.target.innerHTML.trim() )
-    }
+    
   },
         data: function () {
     return {
@@ -18,9 +16,17 @@ const Content = ( 'the-content', {
 
     template: `
 
-    <div><h1 v-for="item in info"  @click="changeMenuVisibility">{{item.number}}</h1>
-    <p v-for="item in info"   v-if = "visibleStatus" >{{item.six}}</p>
-    </div>`
+<section class="list">
+  
+    <div v-for="item in info"><h1  @click="changeMenuVisibility" >{{item.head}}</h1>
+    <figure v-if = "visibleStatus">
+   <p><img  :src="item.src" ><p> 
+   <figcaption>{{item.description}}</figcaption>
+  </figure>
+  
+
+    </div>
+    </section>`
 })
 
 
@@ -30,23 +36,19 @@ var app = new Vue({
   data:{
     text: {},
     sourceURL:"https://oleksandrnazarenko112.github.io/vue_home_work_2/test.json",
-    mainMenuOptions: [
-      "Осень",
-      "Зима",
-      "Весна",
-      "Лето"
+    show: true
 
-    ],
   },
-    components: {
-    'the-content': Content
-  },
+
     computed: {
     titles: function () {
 
       return Object.keys( this.text )
 
     },
+  },
+      components: {
+    'the-content': Content,
   },
 
     methods: {
@@ -58,8 +60,14 @@ var app = new Vue({
 
       })
          console.log(this.titles)
-    }
+
+    },
+
+
+    
+  
   }
+
 
 })
 

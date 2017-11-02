@@ -1,0 +1,50 @@
+.menu{
+	font-size: 40px;
+	background-color: #FFF;
+	border-radius: 4px;
+	border:1px solid #999;
+	outline: none;
+	box-shadow: none!important;
+	width: 60px;
+	margin: 20px 0;
+	display: inline-block;
+	
+}
+img{
+	margin: 40px auto 0;
+	display: block;
+	width: 600px;
+
+}
+h1{
+	text-align: center;
+	border-bottom: 1px solid #999;
+	text-align: left;
+	padding-bottom: 5px;
+	cursor: pointer;
+	margin: 0!important;
+	padding: .67em 0;
+
+
+}
+h1:hover{
+	background-color: #f5f5f5;
+}
+figure{
+	width: 600px;
+margin: 0 auto!important;
+color:#999;
+}
+figcaption{
+	text-align: right;
+}
+#app{
+	margin-bottom: 50px; 
+}
+h3{
+	display: inline-block;
+	text-align: center;
+	float: right;
+	
+
+}
